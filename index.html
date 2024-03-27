@@ -4,68 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFA040</title>
-    <style>
-        /* Config: fonts */
-        /* Utilisation directe de la police de caractères */
-        body {
-            font-family: "Cutive Mono", monospace;
-        }
-
-
-        .sep {
-            border: 0;
-            width: 3em;
-            height: 1px;
-            margin: 1em 0;
-            background-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .mast {
-            position: relative;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            color: #fff;
-            background-color: #111;
-            /* Utilisation directe de la couleur */
-            background: rgba(17, 17, 17, 0.9);
-            /* Utilisation de background au lieu de bg-overlay */
-        }
-
-        .mast__bg {
-            /* Ajout de la règle pour que l'image de fond ne se déplace pas */
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .mast__header {
-            padding: 5%;
-        }
-
-        .mast__title {
-            font-size: 1em;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-        }
-
-        .mast__text {
-            font-size: 1em;
-            margin: 0 0 0.5em;
-            line-height: 1.5;
-            white-space: pre;
-        }
-
-        /* Animation des lettres */
-        @keyframes letter-glow {
-            0% { opacity: 0; text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1); }
-            66% { opacity: 1; text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9); }
-            77% { opacity: 1; }
-            100% { opacity: 0.7; text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.0); }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
@@ -75,31 +14,15 @@
                 <h1 class="mast__title js-spanize">Ceci est mon site internet NFA040 - Fait avec plaisir et un peu de café</h1>
                 <hr class="sep"/>
                 <p class="mast__text js-spanize">
-                    Si j'avais par aventure à écrire un traité de morale,<br />
-                    Je mettrais la bonne humeur,<br />
-                    Au premier rang des devoirs.<br />
+                    Si j'avais par aventure à écrire un traité de morale,<br>
+                    Je mettrais la bonne humeur,<br>
+                    Au premier rang des devoirs.<br>
                 </p>
                 <p class="mast__text js-spanize">Oliveur Twist Again - mars 2024</p>
             </header>
         </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        /* Animation des lettres */
-        $(document).ready(function() {
-            $('.js-spanize').each(function() {
-                var text = $(this).text();
-                var spanizedText = '';
-                for (var i = 0; i < text.length; i++) {
-                    spanizedText += '<span>' + text[i] + '</span>';
-                }
-                $(this).html(spanizedText);
-            });
-
-            $('.js-spanize span').each(function(index) {
-                $(this).css('animation-delay', index * 0.1 + 's');
-            });
-        });
-    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
