@@ -60,7 +60,7 @@ body {
 }
 
 .mast__title span {
-    animation: letter-glow 0.5s 0s ease both;
+    animation: letter-glow 0.3s 0s ease both;
 }
 
 .mast__text {
@@ -72,7 +72,7 @@ body {
 }
 
 .mast__text span {
-    animation: letter-glow 0.5s 0s ease both;
+    animation: letter-glow 0.3s 0s ease both;
 }
 
 @keyframes letter-glow {
