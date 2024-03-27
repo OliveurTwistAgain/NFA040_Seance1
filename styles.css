@@ -81,3 +81,18 @@ body {
     77%   { opacity: 1;  }
     100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
 }
+
+@media only screen and (max-width: 600px) {
+  /* Styles spécifiques pour les appareils mobiles */
+  .mast__header {
+    padding: 2%;
+  }
+
+  .mast__title {
+    font-size: 0.8em;
+  }
+
+  .mast__text {
+    font-size: 0.9em;
+  }
+}
