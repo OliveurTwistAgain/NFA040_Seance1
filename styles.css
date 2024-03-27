@@ -95,4 +95,9 @@ body {
   .mast__text {
     font-size: 0.9em;
   }
+    
+  .mast__bg {
+    background-size: 100% auto; /* ou toute autre valeur adaptée à vos besoins */
+  }
 }
+
