@@ -12,17 +12,44 @@
             background-image: url("https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg");
             background-repeat: no-repeat;
             background-size: cover;
+            padding: 20px; /* Ajout de padding pour l'espace autour du contenu */
+        }
+
+        h1 {
+            text-align: center; /* Centrer le titre */
         }
 
         hr {
-            width: 320px;
+            width: 100%; /* Ajustement de la largeur pour le rendre responsive */
             border-style: solid;
             border-width: 1px; 
-            position: center;
         }
 
         img {
-            width:10%;
+            width: 10%;
+            display: block; /* Assurer que l'image est centrée */
+            margin: 0 auto; /* Centrer l'image horizontalement */
+            margin-bottom: 20px; /* Espacement en bas de l'image */
+        }
+
+        h2, p {
+            text-align: center; /* Centrer les éléments */
+            max-width: 80%; /* Limiter la largeur pour une meilleure lisibilité sur les grands écrans */
+            margin: 0 auto; /* Centrer les éléments horizontalement */
+        }
+
+        /* Animation spanizer */
+        .spanize {
+            display: inline-block;
+        }
+        .spanize span {
+            display: inline-block;
+            transform: rotateY(360deg);
+            animation: spin 0.5s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
         }
     </style>
 </head>
@@ -31,10 +58,10 @@
     <h1> Ceci est mon site internet NFA040 - Fait avec plaisir et un peu de café </h1>
 
     <div>
-        <h2 class="js-spanize">J'ai bien peur qu'un monde nouveau nommé Web soit devant nous !</h2>
+        <h2 class="spanize">J'ai bien peur qu'un monde nouveau nommé Web soit devant nous !</h2>
     </div>
 
-    <p class="js-spanize">
+    <p class="spanize">
         Si j'avais par aventure à écrire un traité de morale,
         Je mettrais la bonne humeur
         Au premier rang des devoirs.
@@ -51,7 +78,7 @@
             var s,
             spanizeLetters = {
                 settings: {
-                    letters: $('.js-spanize'),
+                    letters: $('.spanize'),
                 },
                 init: function() {
                     s = this.settings;
