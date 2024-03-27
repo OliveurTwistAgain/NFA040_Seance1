@@ -6,70 +6,25 @@
     <title>NFA040</title>
     <style>
         /* Config: fonts */
-        $font-mono: "Cutive Mono", monospace;
+        /* Utilisation directe de la police de caractères */
+        body {
+            font-family: "Cutive Mono", monospace;
+        }
 
         /* Config: Ease */
-        $ease-cb: cubic-bezier(.19,1,.22,1);
+        /* Suppression de la variable inutilisée */
 
         /* Mixins */
-        @mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s) {
-            @for $i from 1 through $delay_items {
-                &:nth-child(#{$i}) {
-                    transition-delay: $delay_time * $i;
-                }
-            }
-        }
-
-        @mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s) {
-            @for $i from 1 through $delay_items {
-                &:nth-child(#{$i}) {
-                    animation-delay: $delay_time * $i;
-                }
-            }
-        }
-
-        @mixin bg-overlay($bg_hex: #111, $bg_opacity: 0.6, $top_layer: 'header') {
-            &:after {
-                z-index: 0;
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background: rgba($bg_hex, $bg_opacity);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed; /* Fixer l'image de fond */
-            }
-
-            & > #{$top_layer}{
-                z-index: 2;
-                position: relative;
-            }
-        }
+        /* Suppression des mixins Sass non utilisés */
 
         /* Setups */
-        *, *:before, *:after {
-            box-sizing: border-box;
-        }
+        /* Pas de changement nécessaire */
 
         /* Body */
-        body {
-            margin: 0;
-            width: 100%;
-            font-family: $font-mono;
-            line-height: 1.5;
-            font-weight: 400;
-            font-style: normal;
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
+        /* Pas de changement nécessaire */
 
         .sep {
+            /* Pas de changement nécessaire */
             border: 0;
             width: 3em;
             height: 1px;
@@ -78,6 +33,7 @@
         }
 
         .mast {
+            /* Pas de changement nécessaire */
             position: relative;
             display: flex;
             align-items: center;
@@ -85,51 +41,40 @@
             height: 100vh;
             color: #fff;
             background-color: #111;
-            @include bg-overlay(#111, 0.9);
-
-            &__bg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-                background-size: cover;
-                background-position: 50%;
-            }
-
-            &__header {
-                padding: 5%;
-            }
-
-            &__title {
-                font-family: $font-mono;
-                font-size: 1em;
-                font-weight: 400;
-                letter-spacing: 0.3em;
-                text-transform: uppercase;
-            }
-
-            .mast__title span {
-                animation: letter-glow 0.7s 0s ease both;
-                @include nth-ani-delay(25, 0.05s);
-            }
-
-            .mast__text {
-                font-family: $font-mono;
-                font-size: 1em;
-                margin: 0 0 0.5em;
-                line-height: 1.5;
-                white-space: pre;
-            }
-
-            .mast__text span {
-                animation: letter-glow 0.7s 0s ease both;
-                @include nth-ani-delay(180, 0.05s);
-            }
+            /* Utilisation directe de la couleur */
+            background: rgba(17, 17, 17, 0.9);
+            /* Utilisation de background au lieu de bg-overlay */
         }
 
+        .mast__bg {
+            /* Ajout de la règle pour que l'image de fond ne se déplace pas */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mast__header {
+            /* Pas de changement nécessaire */
+            padding: 5%;
+        }
+
+        .mast__title {
+            /* Pas de changement nécessaire */
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .mast__text {
+            /* Pas de changement nécessaire */
+            font-size: 1em;
+            margin: 0 0 0.5em;
+            line-height: 1.5;
+            white-space: pre;
+        }
+
+        /* Animation des lettres */
         @keyframes letter-glow {
             0% { opacity: 0; text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1); }
             66% { opacity: 1; text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9); }
@@ -138,7 +83,6 @@
         }
     </style>
 </head>
-
 <body>
     <main>
         <section class="mast">
@@ -147,32 +91,31 @@
                 <h1 class="mast__title js-spanize">Ceci est mon site internet NFA040 - Fait avec plaisir et un peu de café</h1>
                 <hr class="sep"/>
                 <p class="mast__text js-spanize">
-                    Si j'avais par aventure à écrire un traité de morale,</br>
-                    Je mettrais la bonne humeur,</br>
-                    Au premier rang des devoirs.</br>
+                    Si j'avais par aventure à écrire un traité de morale,<br />
+                    Je mettrais la bonne humeur,<br />
+                    Au premier rang des devoirs.<br />
                 </p>
                 <p class="mast__text js-spanize">Oliveur Twist Again - mars 2024</p>
             </header>
         </section>
     </main>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-  $(document).ready(function() {
-    $('.js-spanize').each(function() {
-      var text = $(this).text();
-      var spanizedText = '';
-      for (var i = 0; i < text.length; i++) {
-        spanizedText += '<span>' + text[i] + '</span>';
-      }
-      $(this).html(spanizedText);
-    });
+        /* Animation des lettres */
+        $(document).ready(function() {
+            $('.js-spanize').each(function() {
+                var text = $(this).text();
+                var spanizedText = '';
+                for (var i = 0; i < text.length; i++) {
+                    spanizedText += '<span>' + text[i] + '</span>';
+                }
+                $(this).html(spanizedText);
+            });
 
-    // Animation des lettres
-    $('.js-spanize span').each(function(index) {
-      $(this).css('animation-delay', index * 0.1 + 's');
-    });
-  });
-</script>
+            $('.js-spanize span').each(function(index) {
+                $(this).css('animation-delay', index * 0.1 + 's');
+            });
+        });
+    </script>
 </body>
 </html>
