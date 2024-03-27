@@ -18,6 +18,10 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+p {
+    margin: 0;
+}
+
 .sep {
     border: 0;
     width: 3em;
