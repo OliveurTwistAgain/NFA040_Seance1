@@ -1,98 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-        <meta charset="UTF-8"/>
-        <title>NFA040</title>
-	<style>body {
-    color: black;
-    background-color: lightcyan;
-  font-family:sans-serif;
-   background-image: url("https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-#progressbar{
-  height: 26px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 200px;
-  background: aquamarine;
-  border-radius: 10px;
-  margin: -100px 0 0 -100px;
-  padding: 2px
-}
-#loading{
-  transition: all 500ms ease;
-  height: 20px;
-  width: calc(100% - 10px);
-  border-radius: 8px;
-  background: teal;
-  position: absolute;
-  margin: 3px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFA040</title>
+    <style>
+        body {
+            color: black;
+            background-color: lightcyan;
+            font-family: sans-serif;
+            background-image: url("https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-  animation: load 10s ease;
-}
-#load{
-  font-family: arial;
-  font-weight: bold;
-  text-align: center;
-  margin-top: -25px;
-}
-@keyframes load{
-  0%{
-    width: 1%;
-  }
-  20%{
-    width: 20%;
-  }
-  45%{
-    width: 65%;
-  }
-  80%{
-    width: 80%;
-}
-}
- div.a {
-    text-align: center;
+        hr {
+            width: 320px;
+            border-style: solid;
+            border-width: 1px; 
+            position: center;
+        }
 
-} 
-
-hr {
-width: 320px;
-border-style: solid;
-border-width: 1px; 
-position: center;
-}
-
-
-
-img {
-width:10%;
-}
-
-		
-	</style>
-	
+        img {
+            width:10%;
+        }
+    </style>
 </head>
-        
+
 <body>
-        <h1> Ceci est mon site internet NFA040 </h1>
+    <h1> Ceci est mon site internet NFA040 - Fait avec plaisir et un peu de café </h1>
 
-
-<div class="a">
-  <h1>Un monde nouveau est devant nous</h1>
-</div>
-<hr>
-    <div id="progressbar">
-        <span id="loading"></span>
-        <div id="load"></div>
+    <div>
+        <h2 class="js-spanize">J'ai bien peur qu'un monde nouveau nommé Web soit devant nous !</h2>
     </div>
-    <meta http-equiv="refresh" content="10.5;url=#" />
-	
-	</div>
-</div>
 
+    <p class="js-spanize">
+        Si j'avais par aventure à écrire un traité de morale,
+        Je mettrais la bonne humeur
+        Au premier rang des devoirs.
+        Oliveur Twist Again - mars 2024
+    </p>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*-----
+        Spanizer
+        - Wraps letters with spans, for css animations
+        -----*/
+        (function($) {
+            var s,
+            spanizeLetters = {
+                settings: {
+                    letters: $('.js-spanize'),
+                },
+                init: function() {
+                    s = this.settings;
+                    this.bindEvents();
+                },
+                bindEvents: function(){
+                    s.letters.html(function (i, el) {
+                        var spanizer = $.trim(el).split("");
+                        return '<span>' + spanizer.join('</span><span>') + '</span>';
+                    });
+                },
+            };
+            spanizeLetters.init();
+        })(jQuery);
+    </script>
 </body>
 </html>
