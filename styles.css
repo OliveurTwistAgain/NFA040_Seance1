@@ -97,7 +97,8 @@ body {
   .mast__text {
     font-size: 0.8em; /* Réduire la taille de la police */
     max-width: 90%; /* Limiter la largeur du texte */
-    margin: 0 auto; /* Centrer le texte horizontalement */
+    /*margin: 0 auto; *//* Centrer le texte horizontalement */
+    white-space: normal;
   }
 
   .mast__bg {
