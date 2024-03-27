@@ -87,7 +87,7 @@ body {
 /* Dans votre Media Query pour les appareils mobiles */
 @media only screen and (max-width: 480px) {
   .mast__header {
-    padding: 10%;
+    padding: 20% 5% 5%;
   }
 
   .mast__title {
