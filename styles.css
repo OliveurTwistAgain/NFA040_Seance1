@@ -104,7 +104,7 @@ body {
 */
 
 /* Dans votre Media Query pour les appareils mobiles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .mast__header {
     padding: 2%;
   }
@@ -114,7 +114,7 @@ body {
   }
 
   .mast__text {
-    font-size: 0.9em; /* Réduire la taille de la police */
+    font-size: 0.8em; /* Réduire la taille de la police */
     max-width: 90%; /* Limiter la largeur du texte */
     margin: 0 auto; /* Centrer le texte horizontalement */
   }
