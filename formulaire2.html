@@ -1,46 +1,106 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HTML suite</title>
-</head>
 
+    <style>
+        /* Vos styles CSS vont ici */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Styles pour rendre le formulaire plus attrayant */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles pour rendre le formulaire réactif */
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #7aa6c2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #004c6d;
+}
+
+/* Styles pour rendre le formulaire plus attrayant sur mobile */
+@media screen and (max-width: 600px) {
+    form {
+        max-width: 100%;
+    }
+}
+
+
+    </style>
+
+</head>
 <body>
 
-<h1>Dresseur de pokéquoi ?</h1>
+<h1>Dresseur de Pokéquoi ?</h1>
 
-  <p>Les champs marqués d'une * sont obligatoires</p>
-
-<form action="#">
-<fieldset>
-<legend>Nouveau dresseur</legend>
-<p>Nom * : <br><input name="A" type="Text" value=""/></p>
+<blockquote>
+    <p>"Si on m'avait dit ça, j'aurai pas signé " - <cite>hahaha</cite></p>
+</blockquote>
 
 
-<p>Description <br>
-<textarea rows="3" cols="30	" name="H">
-</textarea></p>
+<p>Les champs marqués d'une * sont obligatoires</p>
 
-<p> Équipe
-  <br> Rouge <input name="B" type="radio" value="Rouge"/> <br>
-  Jaune <input name="C" type="radio" value="Jaune"/> <br>
-  Bleu <input name="D" type="radio" value="Bleu"/>
-<p>
+<form action="traitement_formulaire.php" method="POST">
+    <fieldset>
+        <legend>Nouveau dresseur</legend>
+        <p>
+            <label for="nom">Nom * :</label><br>
+            <input id="nom" name="nom" type="text" required>
+        </p>
 
-<p>Anniversaire * : <br><input name="E" type="Text" value="jj/mm/aaaa"/></p>
+        <p>
+            <label for="description">Description :</label><br>
+            <textarea id="description" rows="3" cols="30" name="description"></textarea>
+        </p>
 
+        <p>Équipe<br>
+            <input id="rouge" name="equipe" type="radio" value="Rouge">
+            <label for="rouge">Rouge</label><br>
 
-  <p><input type="submit" value="Envoyer" />
+            <input id="jaune" name="equipe" type="radio" value="Jaune">
+            <label for="jaune">Jaune</label><br>
 
-</p>
+            <input id="bleu" name="equipe" type="radio" value="Bleu">
+            <label for="bleu">Bleu</label>
+        </p>
 
-</fieldset>
+        <p>
+            <label for="anniversaire">Anniversaire * :</label><br>
+            <input id="anniversaire" name="anniversaire" type="date" value="jj/mm/aaaa" required>
+        </p>
 
+        <p>
+            <input type="submit" value="Envoyer">
+        </p>
+    </fieldset>
 </form>
-
-
-
-</body>
 
 </body>
 </html>
