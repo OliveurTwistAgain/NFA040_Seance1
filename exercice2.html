@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0"
+          name="viewport">
+    
+    <style>
+        table {
+            border-style: double;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 2px;
+        }
+        
+    </style>
+    
+    
+    <title>Page HTML en 3 parties</title>
+</head>
+<body>
+
+<h2>Voici la première partie :</h2>
+<table border="1">
+    <tr>
+        <th>un tableau</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td>à 6</td>
+        <td>cases</td>
+    </tr>
+
+</table>
+
+
+<h2>Voici la deuxième partie :</h2>
+<ol>
+    <li>Point 1</li>
+    <li>Point 2
+        <ul>
+            <li>Sous élément 1</li>
+            <li>Sous élément 2</li>
+        </ul>
+    </li>
+    <li>Point 3</li>
+</ol>
+
+<h2>Voici la troisième partie : </h2>
+
+<table border="1">
+    <tr>
+        <th>Colonne 1</th>
+        <th>Colonne 2</th>
+        <th>Colonne 3</th>
+        <th colspan="2">Colonne 4 et 5</th>
+    
+    </tr>
+    <tr>
+        <td rowspan="3">lorem ipsum</td>
+        <td rowspan="3">
+            
+            <table border="1">
+                <tr>
+                    <td>lorem ipsum</td>
+                </tr>
+                <tr>
+                    <td>lorem ipsum</td>
+                </tr>
+                <tr>
+                    <td>lorem ipsum</td>
+                </tr>
+            </table>
+        
+        </td>
+        <td rowspan="3">lorem ipsum</td>
+        <td colspan="2">lorem ipsum</td>
+    </tr>
+    <tr>
+        
+        <td colspan="2">
+            
+            <table style="border-style: double;">
+                <tr>
+                    <td>lorem ipsum</td>
+                    <td>lorem ipsum</td>
+                </tr>
+            </table>
+        
+        </td>
+    
+    
+    </tr>
+    <tr>
+        
+        
+        <td colspan="2">lorem ipsum</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
