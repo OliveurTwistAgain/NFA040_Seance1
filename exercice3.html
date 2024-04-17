@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0"
+          name="viewport">
+    
+    <style>
+    
+    </style>
+    
+    
+    <title>Page HTML - suite </title>
+</head>
+
+<body>
+
+<h2>Page HTML - Comment faire pour rester en "Form" ! </h2>
+<form action="/submit_form"
+      method="post">
+    <label for="pseudo">Votre Pseudo:</label><br>
+    <input id="pseudo"
+           name="pseudo"
+           required
+           type="text"><br>
+    <label for="password">Votre mot de passe:</label><br>
+    <input id="password"
+           name="password"
+           required
+           type="password"><br>
+    <label for="confirm_password">Confirmer votre mot de
+                                  passe:</label><br>
+    <input id="confirm_password"
+           name="confirm_password"
+           required
+           type="password"><br>
+    
+    <h3>OS préféré:</h3>
+    
+    
+    <input id="option1"
+           name="options"
+           type="radio"
+           value="Windows XP">
+    <label for="option1">Windows XP</label><br>
+    <input id="option2"
+           name="options"
+           type="radio"
+           value="Windows Vista">
+    <label for="option2">Windows Vista</label><br>
+    <input id="option3"
+           name="options"
+           type="radio"
+           value="MAC OS X">
+    <label for="option3">MAC OS X</label><br>
+    <input id="option4"
+           name="options"
+           type="radio"
+           value="Linux">
+    <label for="option4">Linux</label><br>
+    <input id="option5"
+           name="options"
+           type="radio"
+           value="Autre">
+    <label for="option5">Autre</label><br>
+    
+    
+    <h3>Vous poussédez :</h3>
+    <input id="checkbox1"
+           name="checkbox1"
+           type="checkbox"
+           value="Un ordinateur de bureau">
+    <label for="checkbox1">Un ordinateur de
+                           bureau</label><br>
+    <input id="checkbox2"
+           name="checkbox2"
+           type="checkbox"
+           value="Un portable">
+    <label for="checkbox2">Un portable</label><br>
+    <input id="checkbox3"
+           name="checkbox3"
+           type="checkbox"
+           value="Un netbook">
+    <label for="checkbox3">Un netbook</label><br>
+    <input id="checkbox4"
+           name="checkbox4"
+           type="checkbox"
+           value="Une tablette (Pad)">
+    <label for="checkbox4">Une tablette (Pad)</label><br>
+    <h3>Votre profession :</h3>
+    <select id="profession"
+            multiple="false"
+            name="profession"
+            required>
+        <option value="profession1">Chomeur</option>
+        <option value="profession2">Etudiant</option>
+        <option value="profession3">Fonctionnaire</option>
+        <option value="profession4">Privé</option>
+        <option value="profession5">Retraité</option>
+    </select>
+    
+    <br>
+    <input type="submit"
+           value="S'inscrire !">
+</form>
+</body>
+
+</html>
