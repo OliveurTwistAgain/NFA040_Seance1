@@ -271,6 +271,7 @@
     </footer>
     <a id="top">^</a>
 </div>
+
 <script>
     window.onscroll = function() {scrollFunction()};
 
@@ -283,4 +284,9 @@
     }
 
     document.getElementById("top").onclick = function() {
-        document
+        document.body.scrollTop = 0; // Pour les anciens navigateurs
+        document.documentElement.scrollTop = 0; // Pour les navigateurs modernes
+    }
+</script>
+</body>
+</html>
