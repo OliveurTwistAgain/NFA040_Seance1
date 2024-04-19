@@ -400,16 +400,24 @@ nav {
     </table>
 
 
-    <form class="contact-form">
-        <h2 id="contact">Contactez-moi</h2>
-        <input placeholder="Nom"
-               type="text">
-        <input placeholder="Email"
-               type="text">
-        <textarea placeholder="Message"></textarea>
-        <input type="submit"
-               value="Envoyer">
-    </form>
+<form class="contact-form" action="traitement_formulaire.php" method="post">
+    <h2 id="contact">Contactez-moi</h2>
+    <input placeholder="Nom" type="text" name="nom">
+    <input placeholder="Email" type="text" name="email">
+    <textarea placeholder="Message" name="message"></textarea>
+    <input type="submit" value="Envoyer">
+</form>
+
+
+    <!-- Affichage du message de confirmation ou d'erreur -->
+<?php
+// Vérifier s'il y a un paramètre d'URL indiquant un succès ou une erreur
+if (isset($_GET['success'])) {
+    echo '<p style="color: green;">Message bien envoyé, merci !</p>';
+} elseif (isset($_GET['error'])) {
+    echo '<p style="color: red;">Une erreur s\'est produite lors de l\'envoi du message.</p>';
+}
+?>
 
 
     <footer>
