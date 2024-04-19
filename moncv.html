@@ -22,20 +22,19 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            position: relative;
+            overflow: hidden;
         }
         
         
         header img {
+            float: left;
             width: 100px;
             height: 100px;
+            max-width: 100%;
             border-radius: 50%; /* cercle */
             border: 5px solid #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ombre */
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 100px;
+            
         }
 
         nav {
@@ -104,6 +103,11 @@
         h2 {
             color: #ff7f50;
             margin-top: 0;
+        }
+        
+        h3 {
+            float: left;
+            vertical-align: middle;
         }
 
         /* Styles pour le formulaire */
@@ -211,9 +215,12 @@
 <body>
 <div class="container">
     <header>
-        <h1>Mon CV</h1>
+        
         <img alt="Ma photo de profil"
              src="avatar.jpg">
+        <h3>Olivier - Etudiant L3 Data,
+            Web, Business Intelligence</h3>
+    
     
     </header>
     <nav>
