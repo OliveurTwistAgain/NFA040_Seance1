@@ -7,7 +7,7 @@
     <title>Mon CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
           rel="stylesheet">
-    
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -32,20 +32,38 @@
             width: 100px;
             height: 100px;
             max-width: 100%;
-            border-radius: 50%; /* cercle */
+            #border-radius: 50%; /* cercle */
             border: 5px solid #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ombre */
             
         }
+        
+/* Style pour l'image */
+.profile-img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, opacity 0.3s; /* Ajout de l'effet de transition */
+}
+
+/* Style pour l'effet de survol */
+.profile-img:hover {
+    border-color: #ff7f50; /* Couleur de bordure au survol */
+    opacity: 0.8;
+}
+
+
 
 nav {
     background-color: #003f5c;
     padding: 10px 0;
     text-align: center;
-    height: 100px;
+    height: auto; /* Utilisez une hauteur automatique pour s'adapter au contenu */
     display: flex;
-    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrez les éléments horizontalement */
+    align-items: center; /* Centrez les éléments verticalement */
 }
+
 
 
 
@@ -57,7 +75,7 @@ nav {
 
         nav ul li {
             display: inline-block;
-            margin-right: 20px;
+            margin-right: 10px;
         }
 
         nav ul li a {
@@ -192,7 +210,8 @@ nav {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 1em;
+            font-size: 0.8em;
         }
 
         #contact {
@@ -224,13 +243,17 @@ nav {
 <body>
 <div class="container">
     <header>
-        
-        <img alt="Ma photo de profil"
-             src="avatar.jpg">
+
+        <a href="moncv.html">
+            <img alt="Ma photo de profil"
+                 class="profile-img"
+                 src="avatar.jpg">
+        </a>
+
         <h1>Olivier - Etudiant L3 Data,
             Web, Business Intelligence</h1>
-    
-    
+
+
     </header>
     <nav>
         <ul>
@@ -240,6 +263,8 @@ nav {
                                       Professionnelle</a>
             </li>
             <li><a href="#education">Parcours Académique</a>
+            <li><a href="#hobbies">Informations
+                                   complémentaires</a>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -252,7 +277,7 @@ nav {
             <td colspan="2"><h2 id="soft_skills">Soft
                                                  Skills</h2
             ></td>
-        
+
         </tr>
         <tr class="row-even">
             <td>item</td>
@@ -262,7 +287,7 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr class="row-even">
             <td>item</td>
             <td>item 2</td>
@@ -276,7 +301,7 @@ nav {
                     colspan="2"><h2 id="hard_skills">Hard
                                                      Skills</h2>
             </td>
-        
+
         </tr>
         <tr class="row-even">
             <td>item</td>
@@ -286,7 +311,7 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr class="row-even">
             <td>item</td>
             <td>item 2</td>
@@ -295,12 +320,12 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr>
             <td colspan="2"><h2 id="experience">Expérience
                                                 Professionnelle</h2>
             </td>
-        
+
         </tr>
         <tr class="row-even">
             <td>item</td>
@@ -310,7 +335,7 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr class="row-even">
             <td>item</td>
             <td>item 2</td>
@@ -323,8 +348,8 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
-        
+
+
         <tr>
             <td colspan="2"><h2 id="education">Parcours
                                                Académique</h2>
@@ -338,7 +363,7 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr class="row-even">
             <td>item</td>
             <td>item 2</td>
@@ -347,11 +372,11 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-        
+
         <tr>
-            <td colspan="2"><h2 id="education">Informations
-                                               complémentaires
-                                               (hobbies)</h2>
+            <td colspan="2"><h2 id="hobbies">Informations
+                                             complémentaires
+                                             (hobbies)</h2>
             </td>
         </tr>
         <tr class="row-even">
@@ -370,11 +395,11 @@ nav {
             <td>item</td>
             <td>item 2</td>
         </tr>
-    
-    
+
+
     </table>
-    
-    
+
+
     <form class="contact-form">
         <h2 id="contact">Contactez-moi</h2>
         <input placeholder="Nom"
@@ -385,8 +410,8 @@ nav {
         <input type="submit"
                value="Envoyer">
     </form>
-    
-    
+
+
     <footer>
         <p>Contact : oliveur.twist.again@proton.me
         </p>
